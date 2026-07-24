@@ -51,7 +51,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section 
+    <section
       className="relative w-full bg-[#07192e] overflow-hidden flex flex-col items-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
