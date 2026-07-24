@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Notification01Icon, User03Icon, Menu01Icon, Logout01Icon, Search01Icon } from "@hugeicons/core-free-icons";
-import { redirectToAdmin } from "@/utils/adminRedirect";
 import { colors } from "@/theme/colors";
 
 
@@ -112,7 +111,7 @@ export default function Header() {
           </Link> */}
 
           {/* Login / Register / Profile Dropdown */}
-          {isLoggedIn ? (
+          {/* {isLoggedIn ? (
             <div ref={profileRef} className="relative md:block">
               <button
                 onClick={() => setProfileOpen((prev) => !prev)}
@@ -152,7 +151,14 @@ export default function Header() {
               <HugeiconsIcon icon={User03Icon} size={20} color={colors.white} strokeWidth={1.5} />
               Login / Register
             </Link>
-          )}
+          )} */}
+          <Link
+              href="/registration"
+              className="font-dm-sans hidden md:flex items-center h-[36px] sm:h-[42px] gap-[4px] rounded-[999px] bg-purple py-[6px] sm:py-[8px] pr-[10px] sm:pr-[12px] pl-[8px] sm:pl-[10px] text-white text-xs sm:text-[16px] font-medium transition-opacity hover:opacity-90 whitespace-nowrap"
+            >
+              <HugeiconsIcon icon={User03Icon} size={20} color={colors.white} strokeWidth={1.5} />
+              Register
+            </Link>
 
           {/* Hamburger Menu */}
           {/* <button
