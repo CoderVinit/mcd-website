@@ -166,7 +166,7 @@ export default function Register() {
               <span className={`font-satoshi font-bold text-sm sm:text-base ${
                 step === 'club-form' ? 'text-navy' : 'text-gray-500'
               }`}>
-                1. Club Registration
+                Club Registration
               </span>
             </div>
 
@@ -181,7 +181,7 @@ export default function Register() {
               <span className={`font-satoshi font-bold text-sm sm:text-base ${
                 step !== 'club-form' ? 'text-navy' : 'text-gray-400'
               }`}>
-                2. Student Roster Entry
+                Athlete Roster Entry
               </span>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function Register() {
                     </span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy font-satoshi">
-                    Register Your School / Community Club
+                    Register Your Club
                   </h2>
                   <p className="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">
                     Submit your club details and choose participating team categories. Upon submission, an automated Student Athlete Verification Form will be dispatched to your registered email address.
@@ -211,7 +211,7 @@ export default function Register() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs font-bold text-gray-700 uppercase tracking-wider font-dm-sans">
-                      Club / School Name *
+                      Club Name *
                     </label>
                     <input
                       type="text"
@@ -246,7 +246,7 @@ export default function Register() {
 
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-bold text-gray-700 uppercase tracking-wider font-dm-sans">
-                    School / Ground Address *
+                     Address *
                   </label>
                   <input
                     type="text"
@@ -262,7 +262,7 @@ export default function Register() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs font-bold text-gray-700 uppercase tracking-wider font-dm-sans">
-                      Coach / Representative *
+                      Representative *
                     </label>
                     <input
                       type="text"
