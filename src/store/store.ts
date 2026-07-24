@@ -1,12 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { baseApi } from "./services/baseApi";
-import fanEngagementSlice from "./slices/fanEngagementSlice";
-
 
 export const store = configureStore({
   reducer: {
     [baseApi.reducerPath]: baseApi.reducer,
-    fanEngagement: fanEngagementSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(baseApi.middleware),

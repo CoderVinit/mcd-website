@@ -41,40 +41,13 @@ const navItems = [
       { label: "Standings", href: "/tournaments#standings" },
     ],
   },
-  // {
-  //   label: "TEAMS",
-  //   href: "/sports-ecosystem/associations-clubs",
-  //   hasDropdown: true,
-  //   dropdownItems: [
-  //     { label: "Team Directory", href: "/sports-ecosystem/associations-clubs" },
-  //     { label: "Team Profile", href: "/sports-ecosystem/associations-clubs" },
-  //   ],
-  // },
-  // {
-  //   label: "ATHLETES",
-  //   href: "/sports-ecosystem/athletes-directory",
-  //   hasDropdown: true,
-  //   dropdownItems: [
-  //     { label: "Athlete Directory", href: "/sports-ecosystem/athletes-directory" },
-  //     { label: "Athlete Profile", href: "/sports-ecosystem/athletes-directory" },
-  //   ],
-  // },
   { label: "VENUES", href: "/infrastructure/venues-facilities" },
   {
     label: "MEDIA",
     href: "/media",
-    hasDropdown:false,
+    hasDropdown: false,
   },
   { label: "SPONSORS & PARTNERS", href: "/partner" },
-  // {
-  //   label: "REGISTER",
-  //   href: "/registration",
-  //   hasDropdown: true,
-  //   dropdownItems: [
-  //     { label: "Athlete Registration", href: "/register-athlete" },
-  //     { label: "Club Registration", href: "/registration" },
-  //   ],
-  // },
   { label: "CONTACT", href: "/contact" },
 ];
 
