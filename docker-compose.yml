@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  39ngml_usp_website:
+    image: 465443875705.dkr.ecr.ap-south-1.amazonaws.com/39ngml_usp_website:latest
+    container_name: 39ngml_usp_website
+    working_dir: /app
+    ports:
+      - "3001:3000" 
+    restart: unless-stopped
+    networks:
+      - 39ngml_neworks
+networks:
+  39ngml_neworks:
+    driver: bridge
