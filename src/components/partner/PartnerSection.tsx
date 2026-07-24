@@ -22,8 +22,8 @@ import {
 const stats = [
   { label: "Community Clubs", value: "80", icon: UserGroup02Icon },
   { label: "Participating Teams", value: "320", icon: Award05Icon },
-  { label: "Verified Athletes", value: "5,100+", icon: Award01Icon },
-  { label: "Delhi Stadium Venues", value: "8", icon: Building02Icon },
+  { label: "Verified Athletes", value: "4,400+", icon: Award01Icon },
+  { label: "Delhi Stadium Venues", value: "2", icon: Building02Icon },
 ];
 
 /* ── Official MML Sponsors & Partners ── */

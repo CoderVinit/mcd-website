@@ -1,18 +1,18 @@
 import PageBanner from "@/components/common/PageBanner";
-import SportsComplexesSection from "@/components/infrastructure/venues-facilities/SportsComplexesSection";
+import ComingSoon from "@/components/common/ComingSoon";
 
 export default function VenueAndFacilitiesPage() {
   return (
     <main>
       <PageBanner
-        title="FACILITIES"
+        title="VENUES"
         watermarkText="FACILITIES"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Facilities" },
+          { label: "Facilities & Venues" },
         ]}
       />
-      <SportsComplexesSection />
+      <ComingSoon />
     </main>
   );
 }
