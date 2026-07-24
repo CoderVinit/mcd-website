@@ -47,10 +47,10 @@ export default function ListingOfSportsAndYouthClubs() {
               Government Support
             </span>
             <h2 className="font-satoshi text-[32px] sm:text-[48px] lg:text-[60px] font-bold text-slate-900 leading-[120%] tracking-tight">
-              Associations & Clubs
+              Zonal Councils &amp; Registered Clubs
             </h2>
             <p className="font-dm-sans text-sm sm:text-base lg:text-lg text-gray-500">
-              The governing bodies and federations driving sports excellence across the state.
+              The official zonal bodies and grassroots football clubs participating in the MCD Mini League across Delhi-NCR.
             </p>
           </div>
 

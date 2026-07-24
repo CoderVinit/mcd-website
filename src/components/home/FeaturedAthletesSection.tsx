@@ -5,14 +5,53 @@ import Image from '@/components/common/ImageWithLoader';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ArrowRight02Icon, StarIcon, User02Icon } from '@hugeicons/core-free-icons';
 import { useRouter } from 'next/navigation';
-import { featuredAthletes, type AthleteProfile } from '@/data/athletes';
 
-const AthleteCard = ({ athlete, featured = false }: { athlete: AthleteProfile; featured?: boolean }) => {
+interface MMLAthlete {
+  id: string;
+  name: string;
+  club: string;
+  division: string;
+  role: string;
+  image: string;
+  goals: number;
+}
+
+const featuredAthletes: MMLAthlete[] = [
+  {
+    id: "aarav-sharma",
+    name: "Aarav Sharma",
+    club: "Central MCD Strikers",
+    division: "U-11 Boys Division",
+    role: "Forward / Striker",
+    image: "https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop",
+    goals: 7,
+  },
+  {
+    id: "kabir-verma",
+    name: "Kabir Verma",
+    club: "South Delhi United",
+    division: "U-11 Boys Division",
+    role: "Midfielder / Playmaker",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop",
+    goals: 5,
+  },
+  {
+    id: "rohan-gupta",
+    name: "Rohan Gupta",
+    club: "Rohini Lions Club",
+    division: "U-9 Boys Division",
+    role: "Winger / Speedster",
+    image: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop",
+    goals: 6,
+  },
+];
+
+const AthleteCard = ({ athlete, featured = false }: { athlete: MMLAthlete; featured?: boolean }) => {
   const router = useRouter();
 
   return (
     <div
-      onClick={() => router.push(`/sports-ecosystem/athletes-directory/${athlete.slug}`)}
+      onClick={() => router.push('/tournaments/fixtures')}
       className={`flex cursor-pointer flex-col items-center rounded-3xl border border-gray-200/80 bg-white w-full ${
         featured ? 'lg:w-[420px]' : 'lg:w-[360px]'
       } p-3.5 gap-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group`}
@@ -24,7 +63,7 @@ const AthleteCard = ({ athlete, featured = false }: { athlete: AthleteProfile; f
         
         {/* Category Badge */}
         <div className="absolute top-3 left-3 px-3.5 py-1 rounded-full bg-orange/90 text-white text-xs font-bold font-dm-sans backdrop-blur-md shadow-sm">
-          MML Scouting Top Performer
+          MML Scouted Performer
         </div>
 
         {/* Name plate */}
@@ -33,7 +72,7 @@ const AthleteCard = ({ athlete, featured = false }: { athlete: AthleteProfile; f
             {athlete.name}
           </span>
           <span className="text-xs text-white/80 font-dm-sans">
-            {athlete.sport} • MML Talent Pool
+            {athlete.club} • {athlete.role}
           </span>
         </div>
       </div>
@@ -42,9 +81,9 @@ const AthleteCard = ({ athlete, featured = false }: { athlete: AthleteProfile; f
       <div className="flex items-center justify-between w-full px-4 py-2.5 bg-slate-50 rounded-xl text-xs font-dm-sans font-bold text-navy">
         <span className="flex items-center gap-1.5 text-orange">
           <HugeiconsIcon icon={StarIcon} size={15} />
-          U-11 Division
+          {athlete.division}
         </span>
-        <span className="text-gray-500 font-medium">MML Digital ID Verified</span>
+        <span className="text-gray-600 font-semibold">{athlete.goals} Season Goals</span>
       </div>
     </div>
   );
@@ -71,12 +110,12 @@ const FeaturedAthletesSection = () => {
               MCD Mini League Rising Stars
             </h2>
             <p className="text-[15px] sm:text-[17px] text-gray-600 font-dm-sans">
-              Scouted grassroots talent from U-9 and U-11 Football divisions across Delhi-NCR.
+              Scouted grassroots talent from Under-9 and Under-11 Football divisions across Delhi-NCR.
             </p>
           </div>
 
           <button
-            onClick={() => router.push('/sports-ecosystem/athletes-directory')}
+            onClick={() => router.push('/tournaments/fixtures')}
             className="w-full sm:w-auto flex items-center justify-center gap-2.5 border-2 border-navy rounded-xl px-7 py-3.5 text-sm text-navy font-satoshi font-bold hover:bg-navy hover:text-white transition-all duration-300 cursor-pointer whitespace-nowrap"
           >
             All MML Athletes
