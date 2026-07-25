@@ -13,28 +13,28 @@ const eventsData: EventItem[] = [
   {
     id: 1,
     image: '/images/events/one.png',
-    sport: 'Athletics',
+    sport: 'Football',
     status: 'Upcoming',
-    title: 'Meghalaya Athletics Championship 2026',
-    venue: 'Jawaharlal Nehru Stadium, Shillong',
+    title: 'MCD Mini League Opening Knockout Round 2026',
+    venue: 'Thyagaraj Stadium Arena, INA Colony, New Delhi',
     dateRange: '31 Mar, 2026 – 14 Apr, 2026',
   },
   {
     id: 2,
     image: '/images/events/two.png',
-    sport: 'Multi-Sport',
+    sport: 'Football',
     status: 'Upcoming',
-    title: 'Meghalaya International Sports Festival',
-    venue: 'PA Sangma Sports Complex, Tura',
+    title: 'Delhi Primary Schools Sports Festival',
+    venue: 'Chhatrasal Stadium, Model Town, North Delhi',
     dateRange: '12 May, 2026 – 15 May, 2026',
   },
   {
     id: 3,
     image: '/images/events/three.png',
-    sport: 'Athletics',
+    sport: 'Football',
     status: 'Upcoming',
-    title: 'River Marathon – Mandovi Ironman',
-    venue: 'Jowai Sports Complex, Jowai',
+    title: 'MCD Inter-Zone Grassroots Football Cup',
+    venue: 'Dr. Ambedkar Stadium, Delhi Gate, New Delhi',
     dateRange: '10 Apr, 2026 – 16 Apr, 2026',
   },
   {
@@ -42,17 +42,17 @@ const eventsData: EventItem[] = [
     image: '/images/events/four.png',
     sport: 'Football',
     status: 'Live',
-    title: 'Civil Service Football Tournament',
-    venue: 'Ampati Stadium, Ampati, South West Garo Hills',
+    title: 'MCD Cluster Football Tournament',
+    venue: 'Thyagaraj Stadium Main Pitch, New Delhi',
     dateRange: '28 Mar, 2026 – 5 Apr, 2026',
   },
   {
     id: 5,
     image: '/images/events/five.png',
-    sport: 'Gymnastics',
+    sport: 'Football',
     status: 'Completed',
-    title: 'Asian Aerobatics Gymnastics Championship',
-    venue: 'Nongstoin Sports Complex, Nongstoin, West Khasi Hills',
+    title: 'Delhi Primary School Invitational Cup',
+    venue: 'Jawaharlal Nehru Stadium Outer Turf, New Delhi',
     dateRange: '14 Feb, 2026 – 17 Feb, 2026',
   },
   {
@@ -60,17 +60,17 @@ const eventsData: EventItem[] = [
     image: '/images/events/six.png',
     sport: 'Multi-Sports',
     status: 'Completed',
-    title: '39th National Games 2027 – Meghalaya',
-    venue: 'Williamnagar Sports Complex, Williamnagar, East Garo Hills',
+    title: 'National Grassroots Games – Delhi Phase',
+    venue: 'East Delhi Sports Complex, Tahirpur, Delhi',
     dateRange: 'Jan 2027',
   },
   {
     id: 7,
     image: '/images/events/seven.png',
-    sport: 'Multi-Sport',
+    sport: 'Football',
     status: 'Upcoming',
-    title: 'Lusofonia Games – Meghalaya Delegation',
-    venue: 'Resubelpara Sports Complex, Resubelpara, North Garo Hills',
+    title: 'MCD Primary Girls Football Championship',
+    venue: 'Rohini Sports Complex, Sector 14, North West Delhi',
     dateRange: '9 Mar, 2026 – 14 Apr, 2026',
   },
 ];
@@ -355,10 +355,10 @@ export default function EventsSection() {
                       setActiveTab(tab);
                     }
                   }}
-                  className={`px-3 sm:px-4 py-2 rounded-lg text-[13px] sm:text-[14px] font-semibold font-dm-sans border transition-colors cursor-pointer whitespace-nowrap ${
+                  className={`px-3 sm:px-4 py-2 rounded-lg text-[13px] sm:text-[14px] font-bold font-satoshi border transition-colors cursor-pointer whitespace-nowrap ${
                     (tab !== 'Event Calendar' && activeTab === tab)
-                      ? 'bg-purple text-white border-purple'
-                      : 'bg-neutral-100 text-gray-500 border-neutral-100 hover:border-neutral-100'
+                      ? 'bg-[#F58220] text-white border-[#F58220] shadow-md shadow-orange-500/20'
+                      : 'bg-slate-100 text-gray-600 border-gray-200 hover:bg-slate-200'
                   }`}
                 >
                   {tab === 'Event Calendar' ? (

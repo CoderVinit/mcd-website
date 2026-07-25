@@ -193,13 +193,13 @@ export default function Register() {
                 
                 {/* Header info */}
                 <div className="flex flex-col gap-2 border-b border-gray-100 pb-5">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange/10 border border-orange/20 self-start">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F58220]/10 border border-[#F58220]/20 self-start">
                     <HugeiconsIcon icon={Building02Icon} size={14} color="#F58220" />
-                    <span className="text-xs font-bold font-dm-sans text-orange uppercase tracking-wider">
+                    <span className="text-xs font-bold font-dm-sans text-[#F58220] uppercase tracking-wider">
                       STEP 1: OFFICIAL CLUB REGISTRATION
                     </span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy font-satoshi">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#07192e] font-satoshi">
                     Register Your Club
                   </h2>
                   <p className="text-sm sm:text-base text-gray-600 font-dm-sans leading-relaxed">
@@ -348,10 +348,10 @@ export default function Register() {
                 {/* Submit button */}
                 <button
                   type="submit"
-                  className="w-full py-4 bg-orange hover:bg-orange/90 text-white font-extrabold font-satoshi text-base sm:text-lg rounded-2xl transition-all duration-300 shadow-md flex items-center justify-center gap-2.5 cursor-pointer mt-2"
+                  className="w-full py-4 bg-[#F58220] hover:bg-[#e07318] text-white font-extrabold font-satoshi text-base sm:text-lg rounded-2xl transition-all duration-300 shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2.5 cursor-pointer mt-2"
                 >
                   <span>Submit Club Registration &amp; Send Student Form Link</span>
-                  <HugeiconsIcon icon={ArrowRight02Icon} size={20} />
+                  <HugeiconsIcon icon={ArrowRight02Icon} size={20} color="#ffffff" />
                 </button>
               </form>
             </div>

@@ -323,7 +323,7 @@ export default function TournamentFixturesClient() {
                 onClick={() => setSelectedDivision(div)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold font-satoshi transition-all cursor-pointer ${
                   selectedDivision === div
-                    ? 'bg-purple text-white shadow-xs'
+                    ? 'bg-[#F58220] text-white shadow-md shadow-orange-500/20'
                     : 'bg-slate-100 text-gray-600 hover:bg-slate-200/80'
                 }`}
               >

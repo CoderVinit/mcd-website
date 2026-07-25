@@ -36,13 +36,13 @@ export default function ContactPage() {
           
           {/* Header */}
           <div className="flex flex-col items-center text-center gap-3.5 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange/10 border border-orange/20">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F58220]/10 border border-[#F58220]/20">
               <HugeiconsIcon icon={Call02Icon} size={14} color="#F58220" />
-              <span className="text-xs font-bold font-dm-sans tracking-wider text-orange uppercase">
+              <span className="text-xs font-bold font-dm-sans tracking-wider text-[#F58220] uppercase">
                 GET IN TOUCH WITH MML SECRETARIAT
               </span>
             </div>
-            <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-extrabold text-navy leading-tight font-satoshi">
+            <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-extrabold text-[#07192e] leading-tight font-satoshi">
               We&apos;re Here to Help &amp; Support
             </h2>
             <p className="text-[15px] sm:text-[17px] text-gray-600 font-dm-sans leading-relaxed">
@@ -213,10 +213,10 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-orange hover:bg-orange/90 text-white font-bold font-satoshi text-base rounded-xl transition-all duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-4 bg-[#F58220] hover:bg-[#e07318] text-white font-extrabold font-satoshi text-base rounded-2xl transition-all duration-300 shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>Submit Inquiry Message</span>
-                    <HugeiconsIcon icon={MailSend01Icon} size={18} />
+                    <HugeiconsIcon icon={MailSend01Icon} size={18} color="#ffffff" />
                   </button>
                 </form>
               )}

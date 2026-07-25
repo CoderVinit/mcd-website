@@ -9,22 +9,22 @@ import {
 export const socialLinks = [
   {
     name: "Instagram",
-    href: "https://www.instagram.com/meghalaya_sports_and_youth?igsh=amQxeGlpeHJ0MWJs",
+    href: "https://www.instagram.com/mcd_mini_league",
     icon: InstagramIcon,
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/share/1BufRbLx2n/?mibextid=wwXIfr",
+    href: "https://www.facebook.com/mcdminileague",
     icon: Facebook02Icon,
   },
   {
     name: "X",
-    href: "https://x.com/dsya_meghalaya?s=21&t=oOgPNKjMO6Yn0Ig7qa5qcA",
+    href: "https://x.com/mcd_mini_league",
     icon: NewTwitterIcon,
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/@megha_sports_and_youth_affairs",
+    href: "https://www.youtube.com/@mcd_mini_league",
     icon: YoutubeIcon,
   },
   // {

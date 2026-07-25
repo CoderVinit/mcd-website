@@ -37,14 +37,18 @@ const textSize = (text: string) => {
 export default function PageBanner({ title, watermarkText, breadcrumbs }: PageBannerProps) {
   return (
     <section
-      className="relative w-full overflow-hidden pt-[80px] pb-[40px] px-[16px] md:pt-[100px] md:pb-[60px] md:px-[32px] lg:pt-[120px] lg:pb-[100px] lg:px-[64px] flex flex-col justify-end gap-2 bg-banner-dark"
+      className="relative w-full overflow-hidden pt-[80px] pb-[40px] px-[16px] md:pt-[100px] md:pb-[60px] md:px-[32px] lg:pt-[120px] lg:pb-[100px] lg:px-[64px] flex flex-col justify-end gap-2 bg-[#07192e]"
     >
+      {/* Background Gradient Overlays for Hero Theme Match */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#07192e] via-[#0C1936] to-[#07192e] opacity-90" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#F58220]/15 via-transparent to-transparent pointer-events-none" />
+
       {/* Background watermark text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
         <span
           className={`font-satoshi font-bold uppercase ${textSize(watermarkText || title)} leading-none tracking-[0%] whitespace-nowrap`}
           style={{
-            background: "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%)",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
@@ -58,10 +62,10 @@ export default function PageBanner({ title, watermarkText, breadcrumbs }: PageBa
       <div className="relative z-10 w-full max-w-[1200px] mx-auto h-auto min-h-[120px] md:min-h-[160px] lg:min-h-[200px] flex flex-col justify-end gap-2">
         {/* Breadcrumbs */}
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <nav className="flex items-center gap-2 md:gap-4 font-dm-sans text-[12px] md:text-[14px] font-bold text-white/50 tracking-[0.04em] leading-[150%]">
+          <nav className="flex items-center gap-2 md:gap-4 font-dm-sans text-[12px] md:text-[14px] font-bold text-white/60 tracking-[0.04em] leading-[150%]">
             {breadcrumbs.map((crumb, i) => (
               <span key={i} className="flex items-center gap-2">
-                {i > 0 && <span className="text-white/50">&gt;</span>}
+                {i > 0 && <span className="text-[#F58220]/60">&gt;</span>}
                 {crumb.href ? (
                   crumb.href === "/" ? (
                     <HomeScrollLink className="hover:text-white transition-colors">
@@ -73,7 +77,7 @@ export default function PageBanner({ title, watermarkText, breadcrumbs }: PageBa
                     </Link>
                   )
                 ) : (
-                  <span className="text-white font-semibold">{crumb.label}</span>
+                  <span className="text-[#F58220] font-semibold">{crumb.label}</span>
                 )}
               </span>
             ))}
@@ -81,7 +85,7 @@ export default function PageBanner({ title, watermarkText, breadcrumbs }: PageBa
         )}
 
         {/* Title */}
-        <h1 className="font-satoshi font-bold uppercase text-white text-[32px] md:text-[56px] lg:text-[80px] leading-[120%] tracking-[0%]">
+        <h1 className="font-satoshi font-extrabold uppercase text-white text-[32px] md:text-[56px] lg:text-[80px] leading-[120%] tracking-[0%] drop-shadow-sm">
           {title}
         </h1>
       </div>

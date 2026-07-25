@@ -14,56 +14,38 @@ interface StructureNode {
 
 const structureData: StructureNode[] = [
   {
-    role: 'Chief Minister of Meghalaya',
-    name: 'Congrad k. sangma',
-    telephone: '+91 832 2419840',
-    fax: '+91 832 2419846',
-    message: 'I sincerely thank our member federations for their confidence and support. This trust reflects our shared commitment to strengthening canoeing across Asia and advancing the sport through unity, integrity, and excellence.',
-    image: 'https://meghalaya-s3-bucket.s3.ap-south-1.amazonaws.com/images/1779096208_sangma.png',
-  },
-  {
-    role: 'Sports & Youth Affairs',
-    name: 'Shri. Dikki D. Shira, MCS',
-    telephone: '+91 832 2419420',
-    fax: '+91 832 2419422',
-    message: 'I sincerely thank our member federations for their confidence and support. This trust reflects our shared commitment to strengthening canoeing across Asia and advancing the sport through unity, integrity, and excellence.',
-    image: 'https://meghalaya-s3-bucket.s3.ap-south-1.amazonaws.com/images/1779088331_Dikki.jpg',
-  },
-  {
-    role: 'Director',
-    name: 'Shri. Sandeep Jacques, IAS',
-    telephone: '+91 832 2419510',
-    fax: '+91 832 2419512',
-    message: 'I sincerely thank our member federations for their confidence and support. This trust reflects our shared commitment to strengthening canoeing across Asia and advancing the sport through unity, integrity, and excellence.',
+    role: 'Commissioner, Municipal Corporation of Delhi (MCD)',
+    name: 'Shri. Ashwani Kumar, IAS',
+    telephone: '+91 11 2322 7000',
+    fax: '+91 11 2322 7001',
+    message: 'We are dedicated to building Delhi’s largest grassroots primary school football ecosystem, nurturing young athletic talent and fostering sportsmanship across all 12 MCD zones.',
     image: '/images/athlete-directory/three.jpeg',
   },
   {
-    role: 'Deputy Director',
-    name: 'Shri. John Doe',
-    telephone: '+91 832 2419610',
-    fax: '+91 832 2419612',
-    message: 'I sincerely thank our member federations for their confidence and support. This trust reflects our shared commitment to strengthening canoeing across Asia and advancing the sport through unity, integrity, and excellence.',
+    role: 'President, SITDS Delhi',
+    name: 'Shri. Rajesh Sharma',
+    telephone: '+91 11 2322 7010',
+    fax: '+91 11 2322 7012',
+    message: 'SITDS is proud to partner with MCD in organizing the MCD Mini League. Our technical team works tirelessly to ensure FIFA-standard ground operations, certified referees, and digital GMS player audits.',
     image: '/images/athlete-directory/four.jpeg',
   },
   {
-    role: 'Assistant Director',
-    name: 'Shri. John Doe',
-    telephone: '+91 832 2419710',
-    fax: '+91 832 2419712',
-    message: 'I sincerely thank our member federations for their confidence and support. This trust reflects our shared commitment to strengthening canoeing across Asia and advancing the sport through unity, integrity, and excellence.',
+    role: 'League Director & Secretariat',
+    name: 'Shri. Sandeep Kumar',
+    telephone: '+91 11 2322 7020',
+    fax: '+91 11 2322 7022',
+    message: 'The MCD Mini League provides structured competitive match exposure to over 4,400 primary school athletes across Under-9 and Under-11 divisions.',
     image: '/images/athlete-directory/two.jpeg',
   },
   {
-    role: 'Sports Officer (HQ)',
-    name: 'Shri. John Doe',
-    telephone: '+91 832 2419810',
-    fax: '+91 832 2419812',
-    message: 'I sincerely thank our member federations for their confidence and support. This trust reflects our shared commitment to strengthening canoeing across Asia and advancing the sport through unity, integrity, and excellence.',
+    role: 'Deputy Director (Sports & Youth)',
+    name: 'Shri. Vikramjeet Singh',
+    telephone: '+91 11 2322 7030',
+    fax: '+91 11 2322 7032',
+    message: 'Our goal is to ensure equal sporting opportunities for boys and girls across all MCD primary school clusters in Delhi.',
     image: '/images/athlete-directory/six.jpg',
   },
 ];
-
-
 
 const Organizational = () => {
   return (
@@ -72,10 +54,10 @@ const Organizational = () => {
         {/* Title / Description */}
         <div className="w-full text-center flex flex-col gap-4">
           <h2 className="text-[32px] sm:text-[44px] lg:text-[60px] font-bold text-navy-dark leading-[120%] font-satoshi tracking-[0.02em]">
-            Building Meghalaya&apos;s Sports Ecosystem
+            Building Delhi&apos;s Sports Ecosystem
           </h2>
           <p className="text-[15px] sm:text-[16px] lg:text-[18px] font-medium leading-[150%] text-gray-500 font-dm-sans max-w-[769px] mx-auto">
-            Connecting leadership, departments, and grassroots sports development across the state.
+            Connecting MCD leadership, SITDS operations, and grassroots football development across Delhi zones.
           </p>
         </div>
 
@@ -113,7 +95,7 @@ const Organizational = () => {
 
               {/* Bottom Row: Card */}
               <div className="ml-[52px] sm:ml-[60px] mt-3">
-                <div className="w-full bg-white rounded-2xl pr-4 pl-3 py-3 sm:pr-6 sm:py-3 sm:pl-3 flex flex-col sm:flex-row gap-6 hover:shadow-md transition-shadow duration-300">
+                <div className="w-full bg-white rounded-2xl pr-4 pl-3 py-3 sm:pr-6 sm:py-3 sm:pl-3 flex flex-col sm:flex-row gap-6 hover:shadow-md transition-shadow duration-300 border border-gray-200/80">
                   {/* Photo */}
                   <div className="w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] rounded-2xl sm:rounded-2xl overflow-hidden relative shrink-0">
                     <Image
@@ -165,4 +147,4 @@ const Organizational = () => {
   )
 }
 
-export default Organizational
+export default Organizational;

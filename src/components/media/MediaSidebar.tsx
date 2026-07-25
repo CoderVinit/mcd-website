@@ -33,16 +33,16 @@ export default function MediaSidebar({ activeFilter, onFilterChange }: MediaSide
           <button
             key={opt.id}
             onClick={() => onFilterChange(opt.id)}
-            className={`flex items-center gap-[8px] lg:gap-[16px] px-[16px] lg:px-[24px] py-[10px] lg:py-0 h-[44px] lg:h-[60px] w-auto lg:w-full rounded-[12px] lg:rounded-[16px] font-satoshi font-semibold text-[16px] lg:text-[20px] transition-all duration-200 cursor-pointer shrink-0 ${
+            className={`flex items-center gap-[8px] lg:gap-[16px] px-[16px] lg:px-[24px] py-[10px] lg:py-0 h-[44px] lg:h-[60px] w-auto lg:w-full rounded-[12px] lg:rounded-[16px] font-satoshi font-bold text-[16px] lg:text-[18px] transition-all duration-200 cursor-pointer shrink-0 ${
               isActive
-                ? "bg-purple-50 text-purple-500"
-                : "bg-transparent text-gray-500 hover:bg-gray-50/80"
+                ? "bg-[#F58220] text-white shadow-md shadow-orange-500/20"
+                : "bg-white border border-gray-200/80 text-gray-600 hover:bg-gray-50"
             }`}
           >
             <HugeiconsIcon
               icon={opt.icon}
-              size={24}
-              className={`transition-colors duration-200 ${isActive ? "text-purple-500" : "text-gray-500"}`}
+              size={22}
+              className={`transition-colors duration-200 ${isActive ? "text-white" : "text-gray-500"}`}
               strokeWidth={2}
             />
             <span>{opt.label}</span>

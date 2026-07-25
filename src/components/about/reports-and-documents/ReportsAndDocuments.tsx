@@ -27,7 +27,7 @@ const initialDocuments: DocumentItem[] = [
     downloadUrl: "#",
   },
   {
-    title: "Meghalaya Sports Policy 2024",
+    title: "Delhi Grassroots Sports Policy 2024",
     category: "Policy Document",
     description: "Official guidelines, structures, and direct incentives aimed at promoting community fitness and training paths for high-performance athletes.",
     date: "August 2024",
@@ -80,7 +80,7 @@ export default function ReportsAndDocuments() {
             Reports & Documents
           </h2>
           <p className="font-dm-sans text-sm sm:text-base lg:text-lg text-gray-500">
-            Access official reports, policy documents, and departmental publications from DSYA
+            Access official reports, policy documents, and departmental publications from MCD &amp; SITDS
           </p>
         </div>
 

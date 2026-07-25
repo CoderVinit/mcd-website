@@ -21,7 +21,7 @@ export default function MediaGallery() {
   const mediaItems: MediaItem[] = [
     {
       id: 1,
-      url: "https://meghalaya-s3-bucket.s3.ap-south-1.amazonaws.com/images/1784273075_Rectangle%203463336.png",
+      url: "/images/events/one.png",
       alt: "Stadium crowd watching a football match",
       title: "League Stadium Atmosphere",
       gridClass: "md:col-start-1 md:col-span-2 md:row-start-1 md:row-span-3",
@@ -35,7 +35,7 @@ export default function MediaGallery() {
     },
     {
       id: 3,
-      url: "https://meghalaya-s3-bucket.s3.ap-south-1.amazonaws.com/images/1784273091_Rectangle%203463339.png",
+      url: "/images/events/two.png",
       alt: "Footballer running with ball on green pitch",
       title: "Fast Break & Dribble",
       gridClass: "md:col-start-3 md:col-span-1 md:row-start-1 md:row-span-4",
@@ -57,7 +57,7 @@ export default function MediaGallery() {
     },
     {
       id: 6,
-      url: "https://meghalaya-s3-bucket.s3.ap-south-1.amazonaws.com/images/1784273090_Rectangle%203463341.png",
+      url: "/images/events/three.png",
       alt: "Football players action in competitive match",
       title: "Matchday Competitive Action",
       gridClass: "md:col-start-4 md:col-span-2 md:row-start-4 md:row-span-2",
@@ -79,7 +79,7 @@ export default function MediaGallery() {
     },
     {
       id: 9,
-      url: "https://meghalaya-s3-bucket.s3.ap-south-1.amazonaws.com/images/1784273090_Rectangle%203463342.png",
+      url: "/images/events/five.png",
       alt: "Spectators in a football stadium at night under floodlights",
       title: "Night Match Under Floodlights",
       gridClass: "md:col-start-6 md:col-span-2 md:row-start-3 md:row-span-3",

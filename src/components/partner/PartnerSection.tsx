@@ -118,25 +118,25 @@ export default function PartnerSection() {
       <div className="w-full max-w-[1280px] mx-auto flex flex-col gap-12 sm:gap-16">
 
         {/* ── Notice Bar ── */}
-        <div className="w-full bg-orange/10 border border-orange/20 rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-4">
+        <div className="w-full bg-[#F58220]/10 border border-[#F58220]/20 rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-orange text-white flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-[#F58220] text-white flex items-center justify-center shrink-0">
               <HugeiconsIcon icon={Notification01Icon} size={20} strokeWidth={2} />
             </div>
             <div className="flex flex-col gap-0.5">
-              <h3 className="font-satoshi font-bold text-sm sm:text-base text-navy">
+              <h3 className="font-satoshi font-bold text-sm sm:text-base text-[#07192e]">
                 MCD Mini League Sponsorship Desk
               </h3>
               <p className="font-dm-sans text-xs sm:text-sm text-gray-600">
                 Corporate sponsorship opportunities for Season 2026 are open. Contact our secretariat at{" "}
-                <span className="font-bold text-navy">partnerships@mcd.gov.in</span>
+                <span className="font-bold text-[#07192e]">partnerships@mcd.gov.in</span>
               </p>
             </div>
           </div>
 
           <button
             onClick={handleCopy}
-            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-50 border border-gray-200 rounded-xl text-xs font-bold font-dm-sans text-navy cursor-pointer transition-colors shrink-0"
+            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-50 border border-gray-200 rounded-xl text-xs font-bold font-dm-sans text-[#07192e] cursor-pointer transition-colors shrink-0"
           >
             <HugeiconsIcon icon={copied ? Tick01Icon : Copy01Icon} size={15} color={copied ? colors.green : colors.gray700} />
             <span>{copied ? "Copied Email" : "Copy Email"}</span>
@@ -157,7 +157,7 @@ export default function PartnerSection() {
                 <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple shrink-0">
                   <HugeiconsIcon icon={stat.icon} size={24} strokeWidth={2} />
                 </div>
-                <span className="font-satoshi font-extrabold text-2xl sm:text-3xl text-navy">
+                <span className="font-satoshi font-extrabold text-2xl sm:text-3xl text-[#07192e]">
                   {stat.value}
                 </span>
               </div>
@@ -167,13 +167,13 @@ export default function PartnerSection() {
 
         {/* ── Header ── */}
         <div className="flex flex-col items-center gap-3 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange/10 border border-orange/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F58220]/10 border border-[#F58220]/20">
             <HugeiconsIcon icon={Award01Icon} size={14} color="#F58220" />
-            <span className="text-xs font-bold font-dm-sans tracking-wider text-orange uppercase">
+            <span className="text-xs font-bold font-dm-sans tracking-wider text-[#F58220] uppercase">
               OFFICIAL PARTNER NETWORK
             </span>
           </div>
-          <h2 className="font-satoshi font-extrabold text-3xl sm:text-4xl lg:text-5xl text-navy leading-tight">
+          <h2 className="font-satoshi font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#07192e] leading-tight">
             Official Partners &amp; Sponsors
           </h2>
           <p className="font-dm-sans text-base sm:text-lg text-gray-600 leading-relaxed">
@@ -192,7 +192,7 @@ export default function PartnerSection() {
                 <div className="self-start px-3 py-1 rounded-full bg-purple-50 text-purple font-dm-sans font-bold text-xs">
                   {partner.category}
                 </div>
-                <h3 className="font-satoshi font-extrabold text-xl sm:text-2xl text-navy group-hover:text-purple transition-colors">
+                <h3 className="font-satoshi font-extrabold text-xl sm:text-2xl text-[#07192e] group-hover:text-purple transition-colors">
                   {partner.name}
                 </h3>
                 <p className="font-dm-sans text-sm text-gray-600 leading-relaxed">
@@ -215,13 +215,13 @@ export default function PartnerSection() {
               <span className="font-dm-sans text-xs font-bold text-purple uppercase tracking-wider">
                 COMMUNITY &amp; BRAND VALUE
               </span>
-              <h2 className="font-satoshi font-extrabold text-2xl sm:text-3xl text-navy">
+              <h2 className="font-satoshi font-extrabold text-2xl sm:text-3xl text-[#07192e]">
                 Why Partner with MCD Mini League?
               </h2>
             </div>
             <a
               href="mailto:partnerships@mcd.gov.in"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white hover:bg-navy-dark font-satoshi font-bold text-sm rounded-xl transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#07192e] hover:bg-[#0C1936] text-white font-satoshi font-bold text-sm rounded-xl transition-all"
             >
               <span>Download Sponsor Deck</span>
               <HugeiconsIcon icon={ArrowRight02Icon} size={16} />
@@ -241,7 +241,7 @@ export default function PartnerSection() {
                   <HugeiconsIcon icon={card.icon} size={24} color={card.color} strokeWidth={2} />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-satoshi font-extrabold text-lg text-navy">
+                  <h3 className="font-satoshi font-extrabold text-lg text-[#07192e]">
                     {card.title}
                   </h3>
                   <p className="font-dm-sans text-sm text-gray-600 leading-relaxed">
@@ -254,7 +254,7 @@ export default function PartnerSection() {
         </div>
 
         {/* ── Call To Action Banner ── */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#753FC9] to-[#8A38F5] text-white shadow-xl">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#07192e] via-[#0C1936] to-[#07192e] text-white shadow-xl">
           <div className="flex flex-col gap-3 max-w-2xl">
             <h2 className="font-satoshi font-extrabold text-3xl sm:text-4xl text-white">
               Interested in Becoming an Official Sponsor?
@@ -266,9 +266,10 @@ export default function PartnerSection() {
 
           <a
             href="mailto:partnerships@mcd.gov.in"
-            className="px-8 py-4 bg-orange hover:bg-orange/90 text-white font-satoshi font-extrabold text-base rounded-2xl transition-all shadow-lg shrink-0"
+            className="px-8 py-4 bg-[#F58220] hover:bg-[#e07318] text-white font-satoshi font-extrabold text-base rounded-2xl transition-all shadow-lg shadow-orange-500/20 shrink-0 flex items-center gap-2"
           >
-            Connect with Partner Desk →
+            <span>Connect with Partner Desk</span>
+            <HugeiconsIcon icon={ArrowRight02Icon} size={20} color="#ffffff" />
           </a>
         </div>
 
