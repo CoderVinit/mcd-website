@@ -18,8 +18,6 @@ const partners: Partner[] = [
   { name: 'Sports Authority of India', category: 'Government Partner' },
   { name: 'Khelo Tech', category: 'Technology Partner' },
   { name: 'AIFF Grassroots', category: 'Governing Body' },
-  { name: 'Nivia Sports', category: 'Official Ball Partner' },
-  { name: 'Adidas India', category: 'Apparel Supporter' },
 ];
 
 export default function SponsorsSection() {
