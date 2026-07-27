@@ -23,7 +23,7 @@ const navItems = [
     hasDropdown: true,
     dropdownItems: [
       { label: "Start a Club", href: "/registration" },
-      { label: "Registration Guidelines", href: "/about/reports-and-documents" },
+      { label: "Registration Guidelines", href: "/clubs/registration-guidlines" },
       // { label: "Rules & Regulations", href: "/about/reports-and-documents" },
       { label: "Downloads", href: "/about/reports-and-documents" },
     ],

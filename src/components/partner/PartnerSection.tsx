@@ -33,18 +33,21 @@ const officialPartners = [
     name: "Municipal Corporation of Delhi (MCD)",
     description: "Lead municipal authority organizing Delhi's largest grassroots primary school football league.",
     role: "Host & Principal Organizer",
+    logo: "/logo/MCD/MCOD.png",
   },
   {
     category: "Implementation Partner",
     name: "SITDS Delhi",
     description: "Sports Infrastructure & Talent Development Society managing ground logistics, refs, and player GMS verification.",
     role: "League Operations & GMS",
+    logo: "/logo/MCD/SITDS.png",
   },
   {
     category: "Equipment & Kit Partner",
-    name: "Decathlon Sports India",
+    name: "Vector X",
     description: "Providing certified training gear, footballs, bibs, and player kits for 320 participating teams.",
     role: "Official Apparel & Kit",
+    logo: "/logo/MCD/vectorxindia_logo.jpg",
   },
   {
     category: "Official Hydration Partner",
@@ -189,8 +192,19 @@ export default function PartnerSection() {
               className="flex flex-col justify-between gap-6 p-6 sm:p-7 rounded-3xl bg-white border border-gray-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="flex flex-col gap-3.5">
-                <div className="self-start px-3 py-1 rounded-full bg-purple-50 text-purple font-dm-sans font-bold text-xs">
-                  {partner.category}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="self-start px-3 py-1 rounded-full bg-purple-50 text-purple font-dm-sans font-bold text-xs">
+                    {partner.category}
+                  </div>
+                  {partner.logo && (
+                    <div className="h-10 flex items-center justify-center shrink-0">
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="max-h-10 max-w-[100px] w-auto h-auto object-contain"
+                      />
+                    </div>
+                  )}
                 </div>
                 <h3 className="font-satoshi font-extrabold text-xl sm:text-2xl text-[#07192e] group-hover:text-purple transition-colors">
                   {partner.name}

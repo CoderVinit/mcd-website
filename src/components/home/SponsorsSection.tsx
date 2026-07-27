@@ -7,12 +7,13 @@ import { Award01Icon } from '@hugeicons/core-free-icons';
 interface Partner {
   name: string;
   category: string;
+  logo?:string
 }
 
 const partners: Partner[] = [
-  { name: 'Municipal Corporation of Delhi', category: 'Title Partner' },
-  { name: 'SITDS Delhi', category: 'Implementation Partner' },
-  { name: 'Decathlon Sports', category: 'Equipment Partner' },
+  { name: 'Municipal Corporation of Delhi', category: 'Title Partner', logo: '/logo/MCD/MCOD.png' },
+  { name: 'SITDS Delhi', category: 'Implementation Partner', logo: '/logo/MCD/SITDS.png' },
+  { name: 'Vector X', category: 'Equipment Partner', logo: '/logo/MCD/vectorxindia_logo.jpg' },
   { name: 'Powerade', category: 'Hydration Partner' },
   { name: 'Sports Authority of India', category: 'Government Partner' },
   { name: 'Khelo Tech', category: 'Technology Partner' },
@@ -55,14 +56,25 @@ export default function SponsorsSection() {
             {marqueeItems.map((partner, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center bg-slate-50/90 hover:bg-white border border-gray-200/80 hover:border-purple/30 rounded-2xl px-7 py-4 shadow-2xs hover:shadow-lg transition-all duration-300 group shrink-0 min-w-[210px]"
+                className="flex flex-row items-center gap-3.5 bg-slate-50/90 hover:bg-white border border-gray-200/80 hover:border-purple/30 rounded-2xl px-5 py-3.5 shadow-2xs hover:shadow-lg transition-all duration-300 group shrink-0"
               >
-                <span className="text-sm sm:text-base font-extrabold text-navy group-hover:text-purple tracking-wider font-satoshi uppercase whitespace-nowrap transition-colors">
-                  {partner.name}
-                </span>
-                <span className="text-[11px] font-semibold text-gray-500 font-dm-sans">
-                  {partner.category}
-                </span>
+                {partner.logo && (
+                  <div className="w-10 h-10 flex items-center justify-center shrink-0 rounded-xl bg-white p-1 border border-gray-200/60 shadow-2xs">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-full max-w-full w-auto h-auto object-contain transition-transform group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-col justify-center">
+                  <span className="text-sm sm:text-base font-extrabold text-navy group-hover:text-purple tracking-wider font-satoshi uppercase whitespace-nowrap transition-colors">
+                    {partner.name}
+                  </span>
+                  <span className="text-[11px] font-semibold text-gray-500 font-dm-sans">
+                    {partner.category}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
