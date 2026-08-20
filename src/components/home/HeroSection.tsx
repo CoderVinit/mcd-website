@@ -10,7 +10,7 @@ import { colors } from "@/theme/colors";
 const slides = [
   {
     id: 1,
-    image: "/images/MCD/herobanner2.png",
+    image: "/images/MCD/herobanner4.png",
     alt: "MCD Mini League Official Banner",
     hasOverlayText: false,
   },
@@ -52,12 +52,12 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full bg-[#07192e] overflow-hidden flex flex-col items-center"
+      className="relative w-full bg-[#07192e] overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Slide Container */}
-      <div className="relative w-full min-h-[480px] sm:min-h-[540px] flex items-center">
+      {/* Slide Container — aspect-[16/9] matches herobanner4.png (1672×941) perfectly */}
+      <div className="relative w-full aspect-[16/9]">
         {slides.map((slide, index) => {
           const isActive = index === currentSlide;
           return (
@@ -72,7 +72,7 @@ export default function HeroSection() {
                 src={slide.image}
                 alt={slide.alt}
                 fill
-                className={slide.id === 1 ? "object-contain bg-[#07192e]" : "object-cover object-center"}
+                className="object-cover object-center"
                 priority={index === 0}
                 unoptimized
                 sizes="100vw"
