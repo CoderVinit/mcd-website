@@ -10,7 +10,7 @@ import { colors } from "@/theme/colors";
 const slides = [
   {
     id: 1,
-    image: "/images/MCD/herobanner4.png",
+    image: "/images/MCD/homebanner4.png",
     alt: "MCD Mini League Official Banner",
     hasOverlayText: false,
   },
