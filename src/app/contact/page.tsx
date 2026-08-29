@@ -1,25 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
+import Link from 'next/link';
 import PageBanner from '@/components/common/PageBanner';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { Location01Icon, Call02Icon, Mail02Icon, MailSend01Icon, CheckmarkCircle02Icon, Building02Icon } from '@hugeicons/core-free-icons';
+import { Location01Icon, Call02Icon, Mail02Icon, MailSend01Icon, Building02Icon } from '@hugeicons/core-free-icons';
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: 'General Inquiry',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <main className="w-full min-h-screen bg-white">
       <PageBanner
@@ -103,123 +90,21 @@ export default function ContactPage() {
 
             </div>
 
-            {/* Form Column */}
-            <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-gray-200/80 shadow-md">
-              {submitted ? (
-                <div className="flex flex-col items-center text-center gap-4 py-8">
-                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600">
-                    <HugeiconsIcon icon={CheckmarkCircle02Icon} size={36} />
-                  </div>
-                  <h3 className="font-satoshi font-extrabold text-2xl text-navy">
-                    Message Sent Successfully!
-                  </h3>
-                  <p className="font-dm-sans text-sm text-gray-600 max-w-md">
-                    Thank you <strong>{form.name}</strong>. Your message regarding &quot;{form.subject}&quot; has been received. Our team will get back to you shortly.
-                  </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-2.5 bg-purple text-white font-bold font-satoshi text-sm rounded-xl"
-                  >
-                    Send Another Inquiry
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                  <div className="flex flex-col gap-1 pb-2">
-                    <h3 className="font-satoshi font-extrabold text-2xl text-navy">
-                      Send Us a Direct Message
-                    </h3>
-                    <p className="font-dm-sans text-xs text-gray-500">
-                      Fill out the form below and our coordination team will respond within 24 hours.
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-bold text-gray-700 font-dm-sans uppercase">
-                        Your Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="e.g. Rajesh Kumar"
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl text-sm font-dm-sans focus:outline-none focus:border-purple"
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-bold text-gray-700 font-dm-sans uppercase">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="+91 98765 43210"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl text-sm font-dm-sans focus:outline-none focus:border-purple"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-bold text-gray-700 font-dm-sans uppercase">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="rajesh@school.edu.in"
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl text-sm font-dm-sans focus:outline-none focus:border-purple"
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-bold text-gray-700 font-dm-sans uppercase">
-                        Inquiry Topic *
-                      </label>
-                      <select
-                        value={form.subject}
-                        onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-gray-200 rounded-xl text-sm font-dm-sans cursor-pointer focus:outline-none focus:border-purple"
-                      >
-                        <option value="General Inquiry">General Inquiry</option>
-                        <option value="Club Registration">Club Registration Support</option>
-                        <option value="Match Schedule & Fixtures">Match Schedule &amp; Fixtures</option>
-                        <option value="Venue & Facilities">Venue &amp; Slot Booking</option>
-                        <option value="Sponsorship & Partnership">Sponsorship &amp; Partnership</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold text-gray-700 font-dm-sans uppercase">
-                      Your Message *
-                    </label>
-                    <textarea
-                      required
-                      rows={4}
-                      placeholder="Write your inquiry or message here..."
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full p-4 bg-slate-50 border border-gray-200 rounded-xl text-sm font-dm-sans focus:outline-none focus:border-purple"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-4 bg-[#F58220] hover:bg-[#e07318] text-white font-extrabold font-satoshi text-base rounded-2xl transition-all duration-300 shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <span>Submit Inquiry Message</span>
-                    <HugeiconsIcon icon={MailSend01Icon} size={18} color="#ffffff" />
-                  </button>
-                </form>
-              )}
+            {/* Enquiry CTA Column */}
+            <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-gray-200/80 shadow-md flex flex-col items-center text-center gap-5 justify-center">
+              <h3 className="font-satoshi font-extrabold text-2xl text-navy">
+                Want to Join the MCD Delhi Mini League?
+              </h3>
+              <p className="font-dm-sans text-sm text-gray-600 max-w-md">
+                Whether you&apos;re a Club, School, Academy, RWA, Parent, Coach or Sponsor &mdash; start your enquiry and our coordination team will get back to you.
+              </p>
+              <Link
+                href="/contact/enquiry"
+                className="px-8 py-4 bg-[#F58220] hover:bg-[#e07318] text-white font-extrabold font-satoshi text-base rounded-2xl transition-all duration-300 shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2"
+              >
+                <span>Start Your Enquiry</span>
+                <HugeiconsIcon icon={MailSend01Icon} size={18} color="#ffffff" />
+              </Link>
             </div>
 
           </div>

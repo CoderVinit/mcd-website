@@ -102,6 +102,8 @@ const Organizational = () => {
                       src={node.image}
                       alt={node.name}
                       fill
+                      sizes="(max-width: 640px) 80px, 120px"
+                      unoptimized
                       className="object-cover"
                     />
                   </div>

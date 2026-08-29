@@ -36,6 +36,7 @@ export default function Image({ className, style, ...props }: ImageProps) {
       <NextImage
         className={[className, "transition-opacity duration-500", loaded ? "opacity-100" : "opacity-0"].filter(Boolean).join(" ")}
         style={props.fill ? undefined : style}
+        sizes={props.sizes || (props.fill ? "100vw" : undefined)}
         {...props}
         onLoad={(e) => {
           setLoaded(true);

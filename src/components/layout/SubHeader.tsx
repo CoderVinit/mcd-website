@@ -48,7 +48,15 @@ const navItems = [
     hasDropdown: false,
   },
   { label: "SPONSORS & PARTNERS", href: "/partner" },
-  { label: "CONTACT", href: "/contact" },
+  {
+    label: "CONTACT",
+    href: "/contact",
+    hasDropdown: true,
+    dropdownItems: [
+      { label: "Contact Us", href: "/contact" },
+      { label: "Enquire Now", href: "/contact/enquiry" },
+    ],
+  },
 ];
 
 export default function SubHeader() {

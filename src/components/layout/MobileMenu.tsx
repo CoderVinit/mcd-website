@@ -28,6 +28,7 @@ const navItems = [
   { number: "09.", label: "SPONSORS & PARTNERS", href: "/partner", hasDropdown: false },
   { number: "10.", label: "REGISTER", href: "/registration", hasDropdown: false },
   { number: "11.", label: "CONTACT", href: "/contact", hasDropdown: false },
+  { number: "12.", label: "ENQUIRE NOW", href: "/contact/enquiry", hasDropdown: false },
 ];
 
 export default function MobileMenu({ isOpen, onClose, isLoggedIn, onLogout }: MobileMenuProps) {

@@ -64,6 +64,7 @@ export default function MediaCard({ data }: MediaCardProps) {
               src={slides[currentSlide]}
               alt={`${data.title || "Photo"} - Slide ${currentSlide + 1}`}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-contain rounded-[16px]"
               unoptimized
             />
@@ -110,6 +111,7 @@ export default function MediaCard({ data }: MediaCardProps) {
               src={data.image || ""}
               alt={data.description}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-2xl"
               unoptimized
             />
@@ -131,6 +133,7 @@ export default function MediaCard({ data }: MediaCardProps) {
             src={data.image || ""}
             alt={data.title || "News"}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover rounded-2xl"
             unoptimized
           />

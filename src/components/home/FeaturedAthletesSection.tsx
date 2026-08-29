@@ -23,7 +23,7 @@ const featuredAthletes: MMLAthlete[] = [
     club: "Central MCD Strikers",
     division: "U-11 Boys Division",
     role: "Forward / Striker",
-    image: "https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop",
+    image: "/images/rank1.jpg",
     goals: 7,
   },
   {
@@ -32,7 +32,7 @@ const featuredAthletes: MMLAthlete[] = [
     club: "South Delhi United",
     division: "U-11 Boys Division",
     role: "Midfielder / Playmaker",
-    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop",
+    image: "/images/rank2.jpg",
     goals: 5,
   },
   {
@@ -41,7 +41,7 @@ const featuredAthletes: MMLAthlete[] = [
     club: "Rohini Lions Club",
     division: "U-9 Boys Division",
     role: "Winger / Speedster",
-    image: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop",
+    image: "/images/rank3.jpg",
     goals: 6,
   },
 ];
@@ -58,7 +58,14 @@ const AthleteCard = ({ athlete, featured = false }: { athlete: MMLAthlete; featu
     >
       {/* Image with name overlay */}
       <div className={`relative w-full rounded-2xl overflow-hidden ${featured ? 'h-[320px] sm:h-[380px]' : 'h-[260px] sm:h-[320px]'}`}>
-        <Image src={athlete.image} alt={athlete.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+        <Image
+          src={athlete.image}
+          alt={athlete.name}
+          unoptimized
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
         
         {/* Category Badge */}

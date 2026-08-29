@@ -10,17 +10,20 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { Notification01Icon, User03Icon, Menu01Icon, Logout01Icon, Search01Icon } from "@hugeicons/core-free-icons";
 import { colors } from "@/theme/colors";
 
-
+ 
 
 export default function Header() {
   const logoMCOD = "/logo/MCD/MCOD.png";
   const logoSITDS = "/logo/MCD/SITDS.png";
+  const MCDlogo = "/logo/MCD/icon.png";
   
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const profileRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
+  const GMS_REGISTRATION_LINK = process.env.NEXT_PUBLIC_GMS_REGISTRATION_LINK;
 
 
 
@@ -62,21 +65,21 @@ export default function Header() {
         <div className="flex items-center gap-2 sm:gap-[12px] h-auto sm:h-[60px] shrink-0">
           <HomeScrollLink className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
             <img
-              src={logoMCOD}
+              src={MCDlogo}
               alt="MCOD Logo"
               className="h-[35px] sm:h-[48px] lg:h-[58px] w-auto object-contain shrink-0"
             />
-            <span className="text-gray-400 font-light text-base sm:text-xl lg:text-2xl select-none">/</span>
+            {/* <span className="text-gray-400 font-light text-base sm:text-xl lg:text-2xl select-none">/</span>
             <img
               src={logoSITDS}
               alt="SITDS Logo"
               className="h-[35px] sm:h-[48px] lg:h-[75px] w-auto object-contain shrink-0"
-            />
+            /> */}
           </HomeScrollLink>
           <div className="h-[35px] sm:h-[48px] lg:h-[60px] min-w-[1.22px] bg-gray-500 shrink-0" />
           <div className="flex flex-col gap-[2px] sm:gap-[3.24px]">
             <h1 className="font-dm-sans text-black text-[10px] sm:text-[18px] md:text-[20px] lg:text-[23.95px] font-bold leading-[120%] tracking-[0%]">
-             MCD Mini League
+             MCD Delhi Mini League
             </h1>
             <p className="font-dm-sans text-[7px] sm:text-[11px] lg:text-[12.97px] font-semibold leading-[120%] tracking-[0%] bg-purple bg-clip-text text-transparent">
               Delhi
@@ -152,13 +155,13 @@ export default function Header() {
               Login / Register
             </Link>
           )} */}
-          <Link
-              href="/registration"
+          <button
               className="font-dm-sans hidden md:flex items-center h-[36px] sm:h-[42px] gap-[4px] rounded-[999px] bg-purple py-[6px] sm:py-[8px] pr-[10px] sm:pr-[12px] pl-[8px] sm:pl-[10px] text-white text-xs sm:text-[16px] font-medium transition-opacity hover:opacity-90 whitespace-nowrap"
+              onClick={() => window.open(GMS_REGISTRATION_LINK, "_blank")}
             >
               <HugeiconsIcon icon={User03Icon} size={20} color={colors.white} strokeWidth={1.5} />
               Register
-            </Link>
+            </button>
 
           {/* Hamburger Menu */}
           {/* <button

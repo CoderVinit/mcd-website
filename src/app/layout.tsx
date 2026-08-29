@@ -50,7 +50,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "MCD Mini League",
+  title: "MCD Delhi Mini League",
   description: "MCD Mini League - 2026, Delhi",
 };
 

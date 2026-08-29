@@ -16,11 +16,12 @@ const AboutMovementSection = () => {
         {/* Left Side - Image Container */}
         <div className="w-full lg:w-1/2 relative h-[360px] sm:h-[460px] lg:h-[520px] rounded-3xl overflow-hidden shadow-xl border border-gray-100 shrink-0 group">
           <Image
-            src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop"
+            src="/images/hero-sports.jpg"
             alt="MCD Mini League Youth Action"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 1024px) 100vw, 50vw"
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 shadow-lg">

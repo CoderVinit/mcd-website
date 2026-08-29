@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
+import JoinUsSection from '@/components/home/JoinUsSection';
 import ImpactStatisticsSection from '@/components/home/ImpactStatisticsSection';
 import AboutMovementSection from '@/components/home/AboutMovementSection';
 import CommunityClubsSection from '@/components/home/CommunityClubsSection';
@@ -15,6 +16,9 @@ const Page = () => {
     <main className="w-full min-h-screen bg-white">
       {/* Section 1: Hero Banner */}
       <HeroSection />
+
+      {/* Section 1b: Join Us Category Cards */}
+      <JoinUsSection />
 
       {/* Section 2: Impact Statistics */}
       <ImpactStatisticsSection />

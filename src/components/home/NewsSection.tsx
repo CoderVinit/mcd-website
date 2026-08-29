@@ -12,21 +12,21 @@ const mmlNews = [
     date: 'Oct 24, 2026',
     title: 'MCD & Khelo Tech Announce Launch of MCD Mini League across Delhi-NCR',
     description: 'Flagship grassroots sports initiative targeting Under-9 & Under-11 children in Football (11v11) with full CSR subsidy for MCD schools.',
-    image: 'https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop',
+    image: '/images/news1.png',
   },
   {
     category: 'Registration SOP',
     date: 'Oct 28, 2026',
     title: 'School Registration & Cluster Formation Guidelines Released by MCD',
     description: 'Schools unable to field full rosters can join multi-school clusters facilitated by Khelo Tech within a 3km radius.',
-    image: 'https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop',
+    image: '/images/news2.png',
   },
   {
     category: 'GMS Milestone',
     date: 'Nov 02, 2026',
     title: 'Over 5,100 Young Athletes Registered on GMS Portal with Verified Age Proofs',
     description: 'Digital tracking system goes live with neutral External Club Supervisors conducting multi-layer document audits.',
-    image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop',
+    image: '/images/news3.png',
   },
 ];
 
@@ -78,6 +78,8 @@ const NewsSection = () => {
                     src={news.image}
                     alt={news.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    unoptimized
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 px-3.5 py-1 rounded-full bg-navy/90 text-white text-xs font-bold font-dm-sans backdrop-blur-md">

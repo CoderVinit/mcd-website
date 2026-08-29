@@ -1,14 +1,23 @@
 version: '3.8'
+
 services:
-  39ngml_usp_website:
-    image: 465443875705.dkr.ecr.ap-south-1.amazonaws.com/39ngml_usp_website:latest
-    container_name: 39ngml_usp_website
+
+  mcd-frontend-website-staging:
+
+    image: 979699864122.dkr.ecr.ap-south-1.amazonaws.com/mcd-frontend-website-staging:latest
+
+    container_name: mcd-frontend-website-staging
+
     working_dir: /app
+
     ports:
-      - "3001:3000" 
+      - "3001:3001"
+
     restart: unless-stopped
+
     networks:
-      - 39ngml_neworks
+      - mcd_network
+
 networks:
-  39ngml_neworks:
+  mcd_network:
     driver: bridge

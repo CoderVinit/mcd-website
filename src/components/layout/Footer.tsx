@@ -60,7 +60,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-1">
               <h2 className="font-satoshi font-extrabold text-white text-[24px] sm:text-[30px] lg:text-[34px] leading-tight">
-                MCD Mini League
+                MCD Delhi Mini League
               </h2>
               <p className="font-dm-sans text-[#F58220] font-bold text-[13px] sm:text-[15px] tracking-wide uppercase">
                 Delhi Grassroots Football Ecosystem
